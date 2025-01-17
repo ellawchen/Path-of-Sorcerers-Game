@@ -6,3 +6,4 @@ res://weapon.gd
 res://background.tscn
 res://bullet.tscn
 res://weapon.tscn
+res://weapon_pivot.gd
