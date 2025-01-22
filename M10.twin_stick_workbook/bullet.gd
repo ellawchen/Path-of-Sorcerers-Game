@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed := 750
+@export var speed := 800
 
 var max_range := 1000.0
 

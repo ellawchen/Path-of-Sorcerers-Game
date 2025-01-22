@@ -22,6 +22,7 @@ texture = ExtResource("2_0mgm4")
 script = ExtResource("4_iaiew")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(0, 37)
 shape = SubResource("CircleShape2D_fq7f2")
 
@@ -33,6 +34,7 @@ rotation = 0.0297658
 script = ExtResource("5_vhcnd")
 
 [node name="WeaponAnchor" type="Marker2D" parent="WeaponPivot"]
+unique_name_in_owner = true
 position = Vector2(114.919, -4.42212)
 
 [node name="Weapon" parent="WeaponPivot/WeaponAnchor" instance=ExtResource("5_epxhx")]

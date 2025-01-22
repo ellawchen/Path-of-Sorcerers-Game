@@ -2,8 +2,9 @@ res://default_env.tres
 res://player.tscn
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
-res://weapon.gd
+res://mob.gd
+res://player.gd
 res://background.tscn
-res://bullet.tscn
 res://weapon.tscn
-res://weapon_pivot.gd
+res://mob.tscn
+res://bullet.tscn
