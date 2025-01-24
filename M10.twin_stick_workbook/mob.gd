@@ -2,6 +2,7 @@ class_name Mob extends CharacterBody2D
 
 @export var max_speed := 250.0
 @export var acceleration := 700.0
+@export var health := 3: set = set_health
 
 var _player: Player = null
 
@@ -18,7 +19,6 @@ func _ready() -> void:
 			_player = null
 	)
 
-
 func _physics_process(delta: float) -> void:
 	if _player == null:
 		velocity = velocity.move_toward(Vector2.ZERO, acceleration * delta)
@@ -30,3 +30,11 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(desired_velocity, acceleration * delta)
 
 	move_and_slide()
+
+func set_health(new_health: int) -> void: 
+	health = new_health 
+	if health <= 0:
+		die()
+
+func die() -> void:
+	queue_free()

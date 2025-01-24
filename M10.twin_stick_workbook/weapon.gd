@@ -1,4 +1,4 @@
-extends Node2D
+class_name Weapon extends Node2D
 
 @export var bullet_scene: PackedScene = preload("bullet.tscn")
 

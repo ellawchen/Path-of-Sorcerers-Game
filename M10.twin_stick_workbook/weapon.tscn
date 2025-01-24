@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0livhmie0mjm"]
+[gd_scene load_steps=2 format=3 uid="uid://b0livhmie0mjm"]
 
 [ext_resource type="Script" path="res://weapon.gd" id="1_ldmak"]
-[ext_resource type="PackedScene" uid="uid://cghyhapwggkju" path="res://bullet.tscn" id="2_4k448"]
 
 [node name="Weapon" type="Node2D"]
 script = ExtResource("1_ldmak")
-
-[node name="Bullet" parent="." instance=ExtResource("2_4k448")]
