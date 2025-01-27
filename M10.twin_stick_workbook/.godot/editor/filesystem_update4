@@ -6,4 +6,5 @@ res://background.tscn
 res://bullet.tscn
 res://weapon.tscn
 res://mob.tscn
-res://bullet.gd
+res://mob.gd
+res://player.gd

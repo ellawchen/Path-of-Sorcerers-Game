@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://t1g3i711pgfs"]
+[gd_scene load_steps=10 format=3 uid="uid://t1g3i711pgfs"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_6pset"]
 [ext_resource type="PackedScene" path="res://common/shadow.tscn" id="1_tw6r7"]
@@ -10,6 +10,13 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fq7f2"]
 radius = 20.2485
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1smw"]
+bg_color = Color(0.60701, 0.86899, 0.994063, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -52,3 +59,19 @@ rotation = 0.138688
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("5_4eamd")
 flip_v = true
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(168.24, 0)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.12
+offset_top = -90.0
+offset_right = 84.12
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/fill = SubResource("StyleBoxFlat_f1smw")
+value = 24.09
+show_percentage = false

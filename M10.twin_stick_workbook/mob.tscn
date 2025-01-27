@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://nohjoiah3jgr" path="res://mobs/sword_inactive.png" id="2_7hh41"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fyeq3"]
-radius = 18.9991
-height = 125.998
+radius = 19.0
+height = 136.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yacab"]
 radius = 222.41
@@ -27,3 +27,10 @@ unique_name_in_owner = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_yacab")
 debug_color = Color(0.337255, 0.94902, 0.541176, 0.419608)
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+rotation = -1.57166
+shape = SubResource("CapsuleShape2D_fyeq3")
+debug_color = Color(0.861417, 0, 0.102074, 0.42)
