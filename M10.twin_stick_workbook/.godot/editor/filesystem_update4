@@ -1,10 +1,9 @@
 res://default_env.tres
-res://player.tscn
+res://scenes/background.tscn
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
-res://background.tscn
-res://bullet.tscn
-res://weapon.tscn
-res://mob.tscn
-res://mob.gd
-res://player.gd
+res://scripts/pickup.gd
+res://scenes/player.tscn
+res://scenes/bullet.tscn
+res://scenes/mob.tscn
+res://scenes/pickup.tscn

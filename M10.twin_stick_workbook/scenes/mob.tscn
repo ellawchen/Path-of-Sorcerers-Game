@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://clu1ekt7r056f"]
 
-[ext_resource type="Script" path="res://mob.gd" id="1_gnta7"]
+[ext_resource type="Script" path="res://scripts/mob.gd" id="1_gnta7"]
 [ext_resource type="Texture2D" uid="uid://nohjoiah3jgr" path="res://mobs/sword_inactive.png" id="2_7hh41"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fyeq3"]
@@ -21,10 +21,10 @@ texture = ExtResource("2_7hh41")
 rotation = -1.57166
 shape = SubResource("CapsuleShape2D_fyeq3")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="DetectionArea" type="Area2D" parent="."]
 unique_name_in_owner = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_yacab")
 debug_color = Color(0.337255, 0.94902, 0.541176, 0.419608)
 
