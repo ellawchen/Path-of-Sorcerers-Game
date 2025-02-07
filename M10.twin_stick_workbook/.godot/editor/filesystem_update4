@@ -3,7 +3,6 @@ res://scenes/background.tscn
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
 res://scripts/pickup.gd
-res://scenes/player.tscn
-res://scenes/bullet.tscn
-res://scenes/mob.tscn
+res://scenes/chest.tscn
 res://scenes/pickup.tscn
+res://scripts/chest.gd

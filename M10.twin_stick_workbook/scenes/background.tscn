@@ -1,19 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbswe3rf3pq50"]
+[gd_scene load_steps=6 format=3 uid="uid://dbswe3rf3pq50"]
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_xajwj"]
 [ext_resource type="PackedScene" uid="uid://t1g3i711pgfs" path="res://scenes/player.tscn" id="2_ojjyw"]
 [ext_resource type="PackedScene" uid="uid://clu1ekt7r056f" path="res://scenes/mob.tscn" id="3_it6wu"]
 [ext_resource type="PackedScene" uid="uid://drp5rmvbceovw" path="res://scenes/pickup.tscn" id="4_k321d"]
+[ext_resource type="PackedScene" uid="uid://d1a6fmleib5f6" path="res://scenes/chest.tscn" id="5_isn4e"]
 
 [node name="Background" type="Node2D"]
 
 [node name="RoomA" parent="." instance=ExtResource("1_xajwj")]
-
-[node name="Player" parent="." instance=ExtResource("2_ojjyw")]
-position = Vector2(940, 520)
 
 [node name="Mob" parent="." instance=ExtResource("3_it6wu")]
 position = Vector2(348, 284)
 
 [node name="Pickup" parent="." instance=ExtResource("4_k321d")]
 position = Vector2(670, 725)
+
+[node name="Chest" parent="." instance=ExtResource("5_isn4e")]
+position = Vector2(319, 766)
+
+[node name="Player" parent="." instance=ExtResource("2_ojjyw")]
+position = Vector2(940, 520)

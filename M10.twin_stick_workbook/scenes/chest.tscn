@@ -1,0 +1,76 @@
+[gd_scene load_steps=13 format=3 uid="uid://d1a6fmleib5f6"]
+
+[ext_resource type="Texture2D" uid="uid://dub7cda3qxho2" path="res://pickups/chest/chest_bottom.png" id="1_dikna"]
+[ext_resource type="Script" path="res://scripts/chest.gd" id="1_ogx7y"]
+[ext_resource type="Script" path="res://item.gd" id="2_mxpjg"]
+[ext_resource type="Texture2D" uid="uid://bfj2ayjhou4bv" path="res://pickups/chest/chest_top.png" id="2_vrxnd"]
+[ext_resource type="Script" path="res://item_healing.gd" id="3_6l3xr"]
+[ext_resource type="AudioStream" uid="uid://o3ra7o263286" path="res://pickups/pickup_health.wav" id="4_p2ghi"]
+[ext_resource type="Texture2D" uid="uid://be8lmb157qflx" path="res://pickups/pickup_health.png" id="5_sra72"]
+
+[sub_resource type="Resource" id="Resource_hu38y"]
+script = ExtResource("3_6l3xr")
+healing_amount = 1
+display_name = ""
+texture = ExtResource("5_sra72")
+sound_on_pickup = ExtResource("4_p2ghi")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d2k01"]
+radius = 56.0357
+
+[sub_resource type="Animation" id="Animation_2bblg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -6)]
+}
+
+[sub_resource type="Animation" id="Animation_xcfqk"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.266667, 0.433333, 0.666667, 0.866667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -6), Vector2(0, -58.8), Vector2(43, -52), Vector2(70, -20), Vector2(92, 10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hlhh8"]
+_data = {
+"RESET": SubResource("Animation_2bblg"),
+"open": SubResource("Animation_xcfqk")
+}
+
+[node name="Chest" type="Area2D"]
+script = ExtResource("1_ogx7y")
+possible_items = Array[ExtResource("2_mxpjg")]([SubResource("Resource_hu38y")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_d2k01")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+texture = ExtResource("1_dikna")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+rotation = -6.28319
+texture = ExtResource("2_vrxnd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hlhh8")
+}
