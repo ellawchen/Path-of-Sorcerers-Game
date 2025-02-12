@@ -1,8 +1,6 @@
 res://default_env.tres
-res://scenes/background.tscn
+res://scenes/player.tscn
+res://addons/gdpractice/assets/theme.tres
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
-res://scripts/pickup.gd
-res://scenes/chest.tscn
-res://scenes/pickup.tscn
-res://scripts/chest.gd
+res://scenes/background.tscn
