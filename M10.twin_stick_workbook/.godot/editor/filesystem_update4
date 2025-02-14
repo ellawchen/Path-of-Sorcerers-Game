@@ -1,6 +1,14 @@
 res://default_env.tres
-res://scenes/player.tscn
-res://addons/gdpractice/assets/theme.tres
+res://scenes/game.tscn
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
+res://levels/rooms/room_b.tscn
+res://levels/rooms/room_d.tscn
+res://scenes/chest.tscn
 res://scenes/background.tscn
+res://scenes/player.tscn
+res://scenes/bullet.tscn
+res://scenes/mob.tscn
+res://scenes/pause_screen.tscn
+res://scenes/victory_screen.tscn
+res://scenes/victory_screen.gd

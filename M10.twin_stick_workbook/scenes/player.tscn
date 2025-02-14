@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" path="res://common/shadow.tscn" id="1_tw6r7"]
 [ext_resource type="Texture2D" uid="uid://bw03btxpkxde4" path="res://player/godot_bottom.png" id="2_0mgm4"]
 [ext_resource type="Script" path="res://scripts/sprite_2d.gd" id="4_iaiew"]
-[ext_resource type="Texture2D" uid="uid://dekkcmj408pvt" path="res://player/hand_fire.png" id="5_4eamd"]
 [ext_resource type="PackedScene" uid="uid://b0livhmie0mjm" path="res://scenes/weapon.tscn" id="5_epxhx"]
 [ext_resource type="Script" path="res://scripts/weapon_pivot.gd" id="5_vhcnd"]
+[ext_resource type="Texture2D" uid="uid://dkom3jgjpp46x" path="res://addons/Kuronami_Vandal_White.webp" id="7_vxeyh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fq7f2"]
 radius = 20.2485
@@ -45,20 +45,15 @@ unique_name_in_owner = true
 position = Vector2(114.919, -4.42212)
 
 [node name="Weapon" parent="WeaponPivot/WeaponAnchor" instance=ExtResource("5_epxhx")]
+position = Vector2(85.682, -45.5702)
 rotation = -0.000103384
 
 [node name="HandLeft" type="Sprite2D" parent="WeaponPivot/WeaponAnchor"]
-position = Vector2(-25.8, -22.1)
+position = Vector2(9.19, -22.1)
 rotation = -0.116637
-scale = Vector2(0.9, 0.9)
-texture = ExtResource("5_4eamd")
-
-[node name="HandRight" type="Sprite2D" parent="WeaponPivot/WeaponAnchor"]
-position = Vector2(-25.8, 22.9)
-rotation = 0.138688
-scale = Vector2(0.9, 0.9)
-texture = ExtResource("5_4eamd")
-flip_v = true
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("7_vxeyh")
+flip_h = true
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(168.24, 0)

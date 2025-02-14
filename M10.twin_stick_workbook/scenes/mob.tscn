@@ -1,25 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://clu1ekt7r056f"]
+[gd_scene load_steps=6 format=3 uid="uid://clu1ekt7r056f"]
 
 [ext_resource type="Script" path="res://scripts/mob.gd" id="1_gnta7"]
-[ext_resource type="Texture2D" uid="uid://nohjoiah3jgr" path="res://mobs/sword_inactive.png" id="2_7hh41"]
+[ext_resource type="Texture2D" uid="uid://xsppt6te6x6e" path="res://addons/Chamber_Artwork_Full.webp" id="2_6d75u"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fyeq3"]
-radius = 19.0
-height = 136.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2c60"]
+size = Vector2(285.015, 110.994)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yacab"]
-radius = 222.41
+radius = 310.865
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fofh0"]
+size = Vector2(288.025, 110.989)
 
 [node name="Mob" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_gnta7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_7hh41")
+texture = ExtResource("2_6d75u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.50949, 18.5117)
 rotation = -1.57166
-shape = SubResource("CapsuleShape2D_fyeq3")
+shape = SubResource("RectangleShape2D_x2c60")
+debug_color = Color(0.582389, 0.414607, 0.926455, 0.42)
 
 [node name="DetectionArea" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -31,6 +35,7 @@ debug_color = Color(0.337255, 0.94902, 0.541176, 0.419608)
 [node name="HitBox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(-2.56174, 18.0191)
 rotation = -1.57166
-shape = SubResource("CapsuleShape2D_fyeq3")
+shape = SubResource("RectangleShape2D_fofh0")
 debug_color = Color(0.861417, 0, 0.102074, 0.42)

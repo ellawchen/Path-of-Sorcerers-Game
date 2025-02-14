@@ -1,0 +1,71 @@
+[gd_scene load_steps=15 format=4 uid="uid://typ6jc1vqv46"]
+
+[ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="1_3iy0h"]
+[ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="2_v40uc"]
+[ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="3_u1shv"]
+[ext_resource type="PackedScene" uid="uid://diw0kp1e3livt" path="res://levels/rooms/room_d.tscn" id="4_jj5vy"]
+[ext_resource type="PackedScene" uid="uid://c3fl3stluv0gn" path="res://levels/bridges.tscn" id="5_ovaiy"]
+[ext_resource type="PackedScene" uid="uid://dlxjrgals3rg2" path="res://levels/invisible_walls.tscn" id="6_0ivk3"]
+[ext_resource type="PackedScene" uid="uid://t1g3i711pgfs" path="res://scenes/player.tscn" id="7_8kefr"]
+[ext_resource type="Texture2D" uid="uid://iewl2pkwbghe" path="res://levels/props/table_small.png" id="9_67va6"]
+[ext_resource type="Texture2D" uid="uid://cjttn3tupkpss" path="res://levels/props/pot_clay_1.png" id="9_q4x2w"]
+[ext_resource type="Texture2D" uid="uid://b3n0iltyspilu" path="res://levels/props/pot_clay_2.png" id="10_anjt8"]
+[ext_resource type="Texture2D" uid="uid://b417j31jesveh" path="res://levels/props/pot_clay_3.png" id="11_g7813"]
+[ext_resource type="Texture2D" uid="uid://dklu54qejca7p" path="res://levels/props/pot_clay_stacked.png" id="12_7s8yw"]
+[ext_resource type="Texture2D" uid="uid://cffu5ea6g2miv" path="res://levels/props/rocks_gems.png" id="13_vao11"]
+[ext_resource type="Texture2D" uid="uid://bsw2xiqemlhfp" path="res://levels/props/table_small_pots.png" id="14_kncw5"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("7_8kefr")]
+y_sort_enabled = true
+position = Vector2(699, 559)
+collision_mask = 64
+
+[node name="BackgroundBlueSky" parent="." instance=ExtResource("1_3iy0h")]
+
+[node name="RoomA" parent="." instance=ExtResource("2_v40uc")]
+position = Vector2(127, 132)
+
+[node name="RoomB" parent="." instance=ExtResource("3_u1shv")]
+position = Vector2(2303, -256)
+
+[node name="RoomD" parent="." instance=ExtResource("4_jj5vy")]
+position = Vector2(1664, 1661)
+
+[node name="Bridges" parent="." instance=ExtResource("5_ovaiy")]
+position = Vector2(0, -1)
+tile_map_data = PackedByteArray("AAAMAAUAAAAAAAEAAAANAAUAAAAAAAEAAAAOAAUAAAAAAAEAAAAPAAUAAAAAAAEAAAAPAAQAAAADAAEAAAAPAAMAAAADAAEAAAAPAAIAAAADAAAAAAARAAIAAAACAAEAAAAQAAIAAAACAAEAAAAPAAYAAAAAAAAAAAAPAAcAAAADAAEAAAAQAAcAAAACAAEAAAARAAcAAAADAAEAAAARAAgAAAADAAEAAAASAAgAAAACAAEAAAATAAwAAAADAAEAAAATAAsAAAADAAEAAAATAAoAAAADAAEAAAATAAkAAAADAAEAAAATAAgAAAACAAAAAAA=")
+
+[node name="InvisibleWalls" parent="." instance=ExtResource("6_0ivk3")]
+visible = false
+tile_map_data = PackedByteArray("AAANAAQAAAAAAAAAAAAOAAQAAAAAAAAAAAANAAYAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAIAAAAAAAAAAAAPAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAQAAMAAAAAAAAAAAAQAAQAAAAAAAAAAAAQAAUAAAAAAAAAAAAQAAYAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAYAAAAAAAAAAAASAAYAAAAAAAAAAAASAAcAAAAAAAAAAAATAAcAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAASAAkAAAAAAAAAAAASAAoAAAAAAAAAAAASAAsAAAAAAAAAAAAUAAsAAAAAAAAAAAAUAAoAAAAAAAAAAAAUAAkAAAAAAAAAAAAUAAgAAAAAAAAAAAAUAAcAAAAAAAAAAAAZAP3/AAAAAAAAAAAHAAoAAAABAAAAAAA=")
+
+[node name="TableSmall" type="Sprite2D" parent="."]
+position = Vector2(1218, 296)
+texture = ExtResource("9_67va6")
+
+[node name="PotClay1" type="Sprite2D" parent="."]
+position = Vector2(1285, 290)
+texture = ExtResource("9_q4x2w")
+
+[node name="PotClay2" type="Sprite2D" parent="."]
+position = Vector2(789, 1069)
+texture = ExtResource("10_anjt8")
+
+[node name="PotClay3" type="Sprite2D" parent="."]
+position = Vector2(845, 1071)
+texture = ExtResource("11_g7813")
+
+[node name="PotClayStacked" type="Sprite2D" parent="."]
+position = Vector2(597, 824)
+texture = ExtResource("12_7s8yw")
+
+[node name="RocksGems" type="Sprite2D" parent="."]
+position = Vector2(3167, 306)
+texture = ExtResource("13_vao11")
+
+[node name="TableSmallPots" type="Sprite2D" parent="."]
+position = Vector2(3515, 309)
+texture = ExtResource("14_kncw5")

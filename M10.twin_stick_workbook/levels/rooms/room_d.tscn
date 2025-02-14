@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://diw0kp1e3livt"]
+[gd_scene load_steps=7 format=4 uid="uid://diw0kp1e3livt"]
 
 [ext_resource type="Script" path="res://levels/rooms/room.gd" id="1_2c4qj"]
 [ext_resource type="TileSet" uid="uid://bq65uwha45com" path="res://levels/rooms/tilesets/floating_dungeon_tileset.tres" id="2_0mfii"]
 [ext_resource type="PackedScene" uid="uid://ke0kmcp0efiv" path="res://levels/rooms/tilemap_layer_walls.tscn" id="3_5hsqq"]
 [ext_resource type="TileSet" uid="uid://cqb2wtrubw0n6" path="res://levels/rooms/tilesets/tileset_invisible_walls.tres" id="4_c2lc3"]
+[ext_resource type="PackedScene" uid="uid://clu1ekt7r056f" path="res://scenes/mob.tscn" id="5_q3hxj"]
+[ext_resource type="PackedScene" uid="uid://d1a6fmleib5f6" path="res://scenes/chest.tscn" id="6_bpfr5"]
 
 [node name="RoomD" type="Node2D"]
 y_sort_enabled = true
@@ -33,3 +35,18 @@ unique_name_in_owner = true
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD//wgAAAAAAAAAAAD//wkAAAAAAAAAAAD//woAAAAAAAAAAAD//wsAAAAAAAAAAAAIAAsAAAAAAAAAAAAHAAsAAAABAAAAAAAGAAsAAAABAAAAAAAFAAsAAAABAAAAAAAEAAsAAAABAAAAAAADAAsAAAABAAAAAAACAAsAAAABAAAAAAABAAsAAAABAAAAAAAAAAsAAAABAAAAAAD//wcAAAAAAAAAAAD//wYAAAAAAAAAAAD//wUAAAAAAAAAAAD//wQAAAAAAAAAAAD//wMAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAABAAEAAAAAAAAAAAABAAAAAAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAAHAP//AAAAAAAAAAAIAP//AAAAAAAAAAAJAP//AAAAAAAAAAAKAP//AAAAAAAAAAALAP//AAAAAAAAAAALAAAAAAAAAAAAAAALAAEAAAAAAAAAAAALAAIAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAgAAAAAAAAAAAAIAAkAAAAAAAAAAAAIAAoAAAAAAAAAAAAIAAYAAAABAAAAAAAJAAYAAAABAAAAAAAKAAYAAAABAAAAAAA=")
 tile_set = ExtResource("4_c2lc3")
+
+[node name="Mob" parent="." instance=ExtResource("5_q3hxj")]
+position = Vector2(574.77, 200.659)
+
+[node name="Mob2" parent="." instance=ExtResource("5_q3hxj")]
+position = Vector2(906.75, 219.039)
+
+[node name="Mob3" parent="." instance=ExtResource("5_q3hxj")]
+position = Vector2(648.564, 380.744)
+
+[node name="Chest" parent="." instance=ExtResource("6_bpfr5")]
+position = Vector2(184.993, 879.212)
+
+[node name="Chest2" parent="." instance=ExtResource("6_bpfr5")]
+position = Vector2(613.812, 1036.7)

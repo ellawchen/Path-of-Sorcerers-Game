@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbswe3rf3pq50"]
+[gd_scene load_steps=7 format=3 uid="uid://dbswe3rf3pq50"]
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_xajwj"]
 [ext_resource type="PackedScene" uid="uid://t1g3i711pgfs" path="res://scenes/player.tscn" id="2_ojjyw"]
 [ext_resource type="PackedScene" uid="uid://clu1ekt7r056f" path="res://scenes/mob.tscn" id="3_it6wu"]
 [ext_resource type="PackedScene" uid="uid://drp5rmvbceovw" path="res://scenes/pickup.tscn" id="4_k321d"]
 [ext_resource type="PackedScene" uid="uid://d1a6fmleib5f6" path="res://scenes/chest.tscn" id="5_isn4e"]
+[ext_resource type="PackedScene" uid="uid://bb2d1u8igxsrm" path="res://scenes/victory_screen.tscn" id="6_jtuns"]
 
 [node name="Background" type="Node2D"]
 
@@ -21,3 +22,9 @@ position = Vector2(319, 766)
 
 [node name="Player" parent="." instance=ExtResource("2_ojjyw")]
 position = Vector2(940, 520)
+
+[node name="VictoryScreen" parent="." instance=ExtResource("6_jtuns")]
+offset_left = 944.0
+offset_top = 512.0
+offset_right = 944.0
+offset_bottom = 512.0
